@@ -1,6 +1,8 @@
 import React from 'react';
-import AboutUs from './AboutUs';
+import AboutUs from './aboutUs';
 import Home from './home';
+import Service from './service';
+import Contact from './contactUs';
 
 const LandingPage = () => {
   return (
@@ -11,6 +13,12 @@ const LandingPage = () => {
       </section>
       <section id="about-us">
         <AboutUs />
+      </section>
+      <section id="services">
+        <Service />
+      </section>
+      <section id="contactUs">
+        <Contact />
       </section>
       {/* Footer Section */}
       <footer className="bg-gray-800 dark:bg-gray-900 text-white py-6 text-center">
