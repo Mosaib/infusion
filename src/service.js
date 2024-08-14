@@ -1,9 +1,9 @@
 import React from 'react';
 
-const aboutUs = () => {
+const service = () => {
   return (
     <div className="p-6 bg-gray-100 dark:bg-gray-800 min-h-screen">
-      <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">About Us</h1>
+      <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Service</h1>
       <p className="text-lg text-gray-800 dark:text-gray-300">
         Welcome to the About Us page. Here you will find information about our company, mission, and values.
       </p>
@@ -17,4 +17,4 @@ const aboutUs = () => {
   );
 };
 
-export default aboutUs;
+export default service;
