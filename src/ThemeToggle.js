@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState('light');
@@ -21,32 +21,37 @@ const ThemeToggle = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="relative flex items-center justify-center p-2 rounded-full bg-gray-800 text-white focus:outline-none"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      transition={{ type: 'spring', stiffness: 300 }}
+      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+      className="relative flex items-center justify-center w-12 h-12 rounded-full shadow-lg"
+      whileHover={{ scale: 1.2, rotate: 20 }}
+      whileTap={{ scale: 0.9, rotate: -10 }}
+      transition={{ type: ' ', stiffness: 400, damping: 10 }}
     >
-      {theme === 'light' ? (
-        <motion.span
-          className="text-2xl"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 10 }}
-          transition={{ duration: 0.2 }}
-        >
-          🌙
-        </motion.span>
-      ) : (
-        <motion.span
-          className="text-2xl"
-          initial={{ opacity: 0, x: 10 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -10 }}
-          transition={{ duration: 0.2 }}
-        >
-          ☀️
-        </motion.span>
-      )}
+      <AnimatePresence mode="wait">
+        {theme === 'light' ? (
+          <motion.span
+            key="moon"
+            className="text-2xl"
+            initial={{ opacity: 0, x: -20, rotate: -90 }}
+            animate={{ opacity: 1, x: 0, rotate: 0 }}
+            exit={{ opacity: 0, x: 20, rotate: 90 }}
+            transition={{ duration: 0.3 }}
+          >
+            🌙
+          </motion.span>
+        ) : (
+          <motion.span
+            key="sun"
+            className="text-2xl"
+            initial={{ opacity: 0, x: 20, rotate: 90 }}
+            animate={{ opacity: 1, x: 0, rotate: 0 }}
+            exit={{ opacity: 0, x: -20, rotate: -90 }}
+            transition={{ duration: 0.3 }}
+          >
+            ☀️
+          </motion.span>
+        )}
+      </AnimatePresence>
     </motion.button>
   );
 };
