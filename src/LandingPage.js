@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutUs from './aboutUs';
+import AboutUs from './AboutUs';
 import Home from './home';
 import Service from './service';
 import Contact from './contactUs';
