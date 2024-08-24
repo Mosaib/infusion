@@ -99,7 +99,7 @@ const Navbar = () => {
           <div className="flex md:hidden">
             <motion.button
               onClick={toggleMenu}
-              className={`relative flex items-center justify-center p-2 rounded-full transition-transform duration-300 ease-in-out ${isOpen ? 'bg-yellow-400 text-white' : 'bg-yellow-500 text-white'}`}
+              className={`relative flex items-center justify-center p-2 rounded-full transition-transform duration-300 ease-in-out ${isOpen ? 'bg-yellow-500 text-white' : 'bg-yellow-500 text-white'}`}
               initial={{ scale: 1 }}
               animate={{ scale: isOpen ? 1.1 : 1 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -172,7 +172,7 @@ const MobileNavLink = ({ to, text, onClick, isActive }) => {
       <Link
         to={to}
         onClick={onClick}
-        className={`block px-3 py-2 rounded-md text-base font-medium transition-transform duration-300 ease-in-out ${
+        className={`block px-8 py-2 rounded-md text-base font-medium transition-transform duration-300 ease-in-out ${
           isActive
             ? 'text-white bg-yellow-500 shadow-lg scale-110'
             : 'text-gray-300 hover:bg-white hover:text-black hover:scale-105'
