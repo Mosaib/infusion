@@ -136,7 +136,7 @@ const ContactUs = () => {
                   <a href="https://www.facebook.com/people/Infusion-Ads/61556763091563/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500 transition duration-300 transform hover:scale-110">
                     <FaFacebookF className="w-8 h-6" />
                   </a>
-                  <a href="/" target="_blank" rel="noopener noreferrer" sclassName="text-white hover:text-yellow-500 transition duration-300 transform hover:scale-110">
+                  <a href="/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500 transition duration-300 transform hover:scale-110">
                     <FaTwitter className="w-8 h-6" />
                   </a>
                   <a href="https://www.instagram.com/infusion_ads/profilecard/?igsh=MXN6eTV5NnEzMnZ4MQ==" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500 transition duration-300 transform hover:scale-110">
