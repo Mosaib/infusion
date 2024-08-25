@@ -66,7 +66,7 @@ const AboutUs = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full filter blur-3xl opacity-40"></div>
               <img
                 src={Marketing}
-                alt="Marketing"
+                alt="Digital Marketing Services in Asansol by Infusion Ads"
                 className="w-full h-auto max-w-lg mx-auto relative my-auto"
               />
             </div>

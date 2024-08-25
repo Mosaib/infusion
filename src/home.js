@@ -44,15 +44,16 @@ function Home() {
             </motion.div>
           </h1>
 
-          <p className="text-lg sm:text-xl mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+              <p className="text-lg sm:text-xl mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
               We create targeted ad campaigns for shop stores and brands to boost their online presence and drive sales. By leveraging social media platforms, we effectively promote their business and connect with a broader audience.
+              </p>
             </motion.div>
-          </p>
 
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up animation-delay-400">
             <a

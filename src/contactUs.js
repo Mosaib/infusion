@@ -5,7 +5,9 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
+
   });
 
   const [successMessage, setSuccessMessage] = useState('');
@@ -17,11 +19,7 @@ const ContactUs = () => {
 
   setTimeout(() => {
     setSuccessMessage('');
-  }, 10000);
-
-  setTimeout(() => {
-    setErrorMessage('');
-  }, 10000);
+  }, 5000);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,7 +43,7 @@ const ContactUs = () => {
 
       if (response.ok) {
         setSuccessMessage('Thank you! Your message has been sent successfully.');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '' , phone: '' });
         setErrorMessage('');
       } else {
         setErrorMessage('Oops! Something went wrong. Please try again later.');
@@ -80,6 +78,20 @@ const ContactUs = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   />
                 </div>
+
+                <div>
+                  <input
+                    type="number"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Your phone Number"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  />
+                </div>
+
                 <div>
                   <input
                     type="email"
